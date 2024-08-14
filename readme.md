@@ -1,4 +1,4 @@
-This is a for develop unit test and integration with sonarcloud.
+This is a simple app for getting started with unit tests and sonarcloud integration
 
 - Serve app:
 cd server
