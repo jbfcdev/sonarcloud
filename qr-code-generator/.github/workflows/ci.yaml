@@ -1,15 +1,11 @@
 name: ci-sonarcloud
-
 on: 
   pull_request:
     branches:
       - develop
-
 jobs:
-  build:
-
+  run-ci:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
