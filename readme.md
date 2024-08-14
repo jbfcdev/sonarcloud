@@ -14,3 +14,5 @@ npm test
 Credits:
 - https://www.geeksforgeeks.org/qr-code-generator-service-with-node-js-and-express-js/
 - https://expressjs.com/en/starter/static-files.html
+
+#Simple change to see ci working.
