@@ -15,14 +15,15 @@ jobs:
         with:
           node-version: '16.20.2'
       - run: npm ci
+        working-directory: qr-code-generator/server
       - run: npm run build --if-present
       - run: npm test
+        working-directory: qr-code-generator/server
       - name: Analyze with SonarCloud
         uses: sonarsource/sonarcloud-github-action@v2.3.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/sonarcloud-scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: qr-code-generator
           args: >
           -Dsonar.organization=jbfcdev
           -Dsonar.projectKey=sonarcloud
