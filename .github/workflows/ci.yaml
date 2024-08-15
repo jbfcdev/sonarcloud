@@ -29,6 +29,7 @@ jobs:
            -Dsonar.name=sonarcloud
            -Dsonar.sourceencoding=UTF-8
            -Dsonar.sources=qr-code-generator/server
+           -Dsonar.inclusions=**/*.js
            -Dsonar.exclusions=**/*.test.js
            -Dsonar.tests=qr-code-generator/server
            -Dsonar.test.inclusions=**/*.test.js
