@@ -25,7 +25,7 @@ jobs:
         with:
           args: >
            -Dsonar.organization=jbfcdev
-           -Dsonar.projectKey=sonarcloud
+           -Dsonar.projectKey=jbfcdev_sonarcloud
            -Dsonar.name=sonarcloud
            -Dsonar.sourceencoding=UTF-8
            -Dsonar.sources=qr-code-generator/server
