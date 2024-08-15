@@ -18,3 +18,20 @@ jobs:
         working-directory: qr-code-generator/server
       - run: npm test
         working-directory: qr-code-generator/server
+      - name: Analyze with SonarCloud
+        uses: sonarsource/sonarcloud-github-action@v2.3.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/sonarcloud-scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args:
+          -Dsonar.organization=jbfcdev
+          -Dsonar.projectKey=sonarcloud
+          -Dsonar.name=sonarcloud
+          -Dsonar.sourceencoding=UTF-8
+          -Dsonar.sources=qr-code-generator/server
+          -Dsonar.exclusions=**/*.test.js
+          -Dsonar.tests=qr-code-generator/server
+          -Dsonar.test.inclusions=**/*.test.js
+          -Dsonar.javascript.coveragePlugin=lcov
+          -Dsonar.javascript.lcov.reportPatshs=coverage/lcov.info
+          -Dsonar.token=${{ secrets.SONAR_TOKEN }}
