@@ -30,10 +30,11 @@ jobs:
            -Dsonar.name=sonarcloud
            -Dsonar.sourceencoding=UTF-8
            -Dsonar.sources=.
+           -Dsonar.inclusions=**/product.js
            -Dsonar.exclusions=**/*.test.js
            -Dsonar.tests=.
-           -Dsonar.test.inclusions=**/*.test.js
+           -Dsonar.test.inclusions=**/product.test.js
            -Dsonar.javascript.coveragePlugin=lcov
-           -Dsonar.javascript.lcov.reportPatshs=./coverage/lcov.info
+           -Dsonar.javascript.lcov.reportPatshs=coverage/lcov.info
            -Dsonar.token=${{ secrets.SONAR_TOKEN }}
            -X
