@@ -25,8 +25,8 @@ jobs:
         with:
           projectBaseDir: qr-code-generator/server
           args: >
-           -Dsonar.organization=jbfcdev
            -Dsonar.projectKey=jbfcdev_sonarcloud
+           -Dsonar.organization=jbfcdev
            -Dsonar.name=sonarcloud
            -Dsonar.sourceencoding=UTF-8
            -Dsonar.sources=.
