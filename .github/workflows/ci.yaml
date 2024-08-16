@@ -23,15 +23,17 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
+          projectBaseDir: qr-code-generator/server
           args: >
            -Dsonar.organization=jbfcdev
            -Dsonar.projectKey=jbfcdev_sonarcloud
            -Dsonar.name=sonarcloud
            -Dsonar.sourceencoding=UTF-8
-           -Dsonar.sources=qr-code-generator/server
+           -Dsonar.sources=.
            -Dsonar.exclusions=**/*.test.js
-           -Dsonar.tests=qr-code-generator/server
+           -Dsonar.tests=.
            -Dsonar.test.inclusions=**/*.test.js
            -Dsonar.javascript.coveragePlugin=lcov
-           -Dsonar.javascript.lcov.reportPatshs=coverage/lcov.info
+           -Dsonar.javascript.lcov.reportPatshs=./coverage/lcov.info
            -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+           -X
