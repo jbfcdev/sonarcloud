@@ -35,6 +35,6 @@ jobs:
            -Dsonar.tests=.
            -Dsonar.test.inclusions=**/product.test.js
            -Dsonar.javascript.coveragePlugin=lcov
-           -Dsonar.javascript.lcov.reportPatshs=coverage/lcov.info
+           -Dsonar.javascript.lcov.reportPatshs=./coverage/lcov.info
            -Dsonar.token=${{ secrets.SONAR_TOKEN }}
            -X
